@@ -7,125 +7,308 @@ class booking extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Column(
-            children: [
-              Image.asset(
-                "images/map.png",
-                height: 200,
-                width: 400,
+          Image.asset('assets/img/map.png'),
+          Padding(
+            padding: const EdgeInsets.only(top: 210.0),
+            child: Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(30.0),
+                  topLeft: Radius.circular(30.0),
+                ),
               ),
-              Container(
-                height: 576,
-                width: 356,
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(24),
-                  topRight: Radius.circular(24),
-                )),
-                child: Column(
-                  children: [
-                    Container(
-                      width: 49,
-                      height: 4,
-                      color: const Color(0xffEEEEEE),
-                    ),
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    const Text(
-                      "Choose a trip",
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 230.0),
+            child: Column(
+              children: [
+                const Align(
+                  alignment: Alignment.center,
+                  child: Text("Book a ride",
+                      textAlign: TextAlign.end,
                       style: TextStyle(
-                        fontFamily: "uber",
-                        fontWeight: FontWeight.w500,
-                        fontSize: 23,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                      )),
+                ),
+                const Divider(
+                  thickness: 1,
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      width: 3,
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 400,
+                          height: 125,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            image: DecorationImage(
+                              fit: BoxFit.contain,
+                              image: AssetImage('assets/icon/ic_cab.png'),
+                            ),
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "Uber Go",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25,
+                                  ),
+                                ),
+                                const Text(
+                                  "8:46pm - 4min away",
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.blueAccent,
+                                    borderRadius: BorderRadius.circular(5),
+                                  ),
+                                  child: const Padding(
+                                    padding: EdgeInsets.only(left: 5, right: 5),
+                                    child: Text(
+                                      "* Faster",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const Text("\u{20B9}${179}",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                )),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                          width: 64,
+                          height: 64,
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              image: DecorationImage(
+                                  fit: BoxFit.contain,
+                                  image:
+                                      AssetImage('assets/icon/ic_auto.png')))),
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Uber Go",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                          Text(
+                            "8:46pm - 4 min away",
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    Container(
-                      height: 2,
-                      width: 376,
-                      color: const Color(0xffEEEEEE),
-                    ),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                      child: Column(
+                      Column(
                         children: [
                           Container(
-                            width: 370,
-                            height: 180,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(24),
-                                border:
-                                    Border.all(width: 3, color: Colors.black)),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                            child: Row(
                               children: [
-                                const SizedBox(
-                                  height: 24,
+                                Container(
+                                  width: 20,
+                                  height: 20,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.rectangle,
+                                    image: DecorationImage(
+                                      fit: BoxFit.contain,
+                                      image: AssetImage(
+                                          'assets/icon/ic_priceTag.png'),
+                                    ),
+                                  ),
                                 ),
-                                Image.asset("images/car.png"),
-                                const SizedBox(
-                                  height: 2,
+                                const Text(
+                                  "\u{20B9}${170.71}",
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                                Image.asset("images/Frame 52.png")
                               ],
                             ),
                           ),
-                          const SizedBox(
-                            height: 23,
-                          ),
-                          Image.asset("images/go.png"),
-                          const SizedBox(
-                            height: 32,
-                          ),
-                          Image.asset("images/prmr.png"),
-                          const SizedBox(
-                            height: 45,
-                          ),
-                          Container(
-                            height: 1,
-                            color: const Color(0xffEEEEEE),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Image.asset("images/gpay.png"),
-                          const SizedBox(
-                            height: 13,
-                          ),
-                          Container(
-                            width: 331,
-                            height: 54,
-                            decoration: BoxDecoration(
-                                color: Colors.black,
-                                borderRadius: BorderRadius.circular(24)),
-                            child: const Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "Choose Uber Go",
-                                  style: TextStyle(
-                                    fontFamily: "uber",
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 22,
-                                  ),
-                                )
-                              ],
+                          Text(
+                            "\u{20B9}${188.71}",
+                            style: TextStyle(
+                              fontSize: 12,
+                              decoration: TextDecoration.lineThrough,
+                              color: Colors.black.withOpacity(0.7),
                             ),
                           )
                         ],
                       ),
-                    )
-                  ],
+                    ],
+                  ),
                 ),
-              )
-            ],
+                Container(
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 24),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: 48,
+                        height: 64,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.rectangle,
+                          image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image:
+                                AssetImage('assets/icon/ic_uberPremiere.png'),
+                          ),
+                        ),
+                      ),
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Uber Premiere",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                          Text(
+                            "8:46pm - 5 min away",
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const Text("\u{20B9}${170.71}",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          )),
+                    ],
+                  ),
+                ),
+                const Divider(
+                  thickness: 1,
+                ),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(left: 10),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: 50,
+                              height: 30,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.rectangle,
+                                image: DecorationImage(
+                                  fit: BoxFit.contain,
+                                  image:
+                                      AssetImage('assets/icon/ic_gpayLogo.png'),
+                                ),
+                              ),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 10),
+                              child: Text(
+                                "zairza.outr@hdfcbank",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 85, right: 5),
+                              child: Container(
+                                width: 30,
+                                height: 30,
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: AssetImage(
+                                        'assets/icon/ic_forward-arrow.png'),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      Container(
+                        width: 350,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.only(top: 5, bottom: 5),
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Text("Choose Uber Go",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                )),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           )
         ],
       ),

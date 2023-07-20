@@ -1,93 +1,317 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/home.dart';
+import 'package:my_first_app/Utility/app_style.dart';
+// import 'package:learningdarts2/Screen/search.dart';
 
-class service extends StatelessWidget {
-  const service({super.key});
+class Service extends StatelessWidget {
+  const Service({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 27, vertical: 21),
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(7, 41, 0, 0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Services",
-                  style: TextStyle(
-                    fontFamily: "uber",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 32,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 64,
+              ),
+              Text(
+                'Services',
+                style: appStyle.serviceB,
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Text(
+                'Go anywhere, get anything',
+                style: appStyle.serviceS,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    height: 150,
+                    width: 98,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 105,
+                          width: 98,
+                          child: Stack(children: [
+                            Positioned(
+                              top: 15,
+                              child: Container(
+                                height: 89,
+                                width: 98,
+                                decoration: BoxDecoration(
+                                    color: const Color.fromARGB(
+                                        255, 238, 238, 238),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Image.asset('lib/Icons/Ride.png'),
+                              ),
+                            ),
+                            Positioned(
+                              left: 20,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 2),
+                                decoration: BoxDecoration(
+                                    color:
+                                        const Color.fromARGB(255, 59, 134, 78),
+                                    borderRadius: BorderRadius.circular(16)),
+                                child: Text(
+                                  'Promo',
+                                  style: appStyle.promo,
+                                ),
+                              ),
+                            ),
+                          ]),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Ride',
+                          style: appStyle.sugtext,
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  "Go anywhere, get anything",
-                  style: TextStyle(
-                    fontFamily: "uber",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                  SizedBox(
+                    height: 150,
+                    width: 126,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 105,
+                          width: 126,
+                          child: Stack(children: [
+                            Positioned(
+                              top: 15,
+                              child: Container(
+                                height: 89,
+                                width: 126,
+                                decoration: BoxDecoration(
+                                    color: const Color.fromARGB(
+                                        255, 238, 238, 238),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Image.asset('lib/Icons/Package.png'),
+                              ),
+                            ),
+                          ]),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Package',
+                          style: appStyle.sugtext,
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 26,
-                ),
-                Image.asset("images/servc.png"),
-                Image.asset(
-                  "images/Frame 69.png",
-                  width: 380,
-                ),
-                const SizedBox(
-                  height: 340,
-                ),
-              ],
-            ),
-          ),
-          Container(
-            color: const Color(0xffEEEEEE),
-            height: 80,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  width: 30,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const home()));
-                  },
-                  child: Image.asset("images/Frame 34.png"),
-                ),
-                const SizedBox(
-                  width: 30,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const service()));
-                  },
-                  child: Image.asset("images/Frame 35.png"),
-                ),
-                const SizedBox(
-                  width: 30,
-                ),
-                Image.asset("images/Frame 36.png"),
-                const SizedBox(
-                  width: 30,
-                ),
-                Image.asset("images/Frame 37.png"),
-                const SizedBox(
-                  width: 30,
-                ),
-              ],
-            ),
+                  SizedBox(
+                    height: 150,
+                    width: 98,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 105,
+                          width: 98,
+                          child: Stack(children: [
+                            Positioned(
+                              top: 15,
+                              child: Container(
+                                height: 89,
+                                width: 98,
+                                decoration: BoxDecoration(
+                                    color: const Color.fromARGB(
+                                        255, 238, 238, 238),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Image.asset('lib/Icons/Rentals.png'),
+                              ),
+                            ),
+                            Positioned(
+                              left: 20,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 2),
+                                decoration: BoxDecoration(
+                                    color:
+                                        const Color.fromARGB(255, 59, 134, 78),
+                                    borderRadius: BorderRadius.circular(16)),
+                                child: Text(
+                                  'Promo',
+                                  style: appStyle.promo,
+                                ),
+                              ),
+                            ),
+                          ]),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Ride',
+                          style: appStyle.sugtext,
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    height: 150,
+                    width: 81,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 94,
+                          width: 85,
+                          child: Stack(children: [
+                            Positioned(
+                              top: 15,
+                              child: Container(
+                                height: 74,
+                                width: 85,
+                                decoration: BoxDecoration(
+                                    color: const Color.fromARGB(
+                                        255, 238, 238, 238),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Image.asset('lib/Icons/Reserve.png'),
+                              ),
+                            ),
+                          ]),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Reserve',
+                          style: appStyle.sugtext,
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 4,
+                  ),
+                  SizedBox(
+                    height: 150,
+                    width: 82,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 94,
+                          width: 85,
+                          child: Stack(children: [
+                            Positioned(
+                              top: 15,
+                              child: Container(
+                                height: 74,
+                                width: 85,
+                                decoration: BoxDecoration(
+                                    color: const Color.fromARGB(
+                                        255, 238, 238, 238),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Image.asset('lib/Icons/Package.png'),
+                              ),
+                            ),
+                          ]),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Shuttle',
+                          style: appStyle.sugtext,
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 4,
+                  ),
+                  SizedBox(
+                    height: 150,
+                    width: 82,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 94,
+                          width: 85,
+                          child: Stack(children: [
+                            Positioned(
+                              top: 15,
+                              child: Container(
+                                height: 74,
+                                width: 85,
+                                decoration: BoxDecoration(
+                                    color: const Color.fromARGB(
+                                        255, 238, 238, 238),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Image.asset('lib/Icons/Rentals.png'),
+                              ),
+                            ),
+                          ]),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Intercity',
+                          style: appStyle.sugtext,
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 4,
+                  ),
+                  SizedBox(
+                    height: 150,
+                    width: 81,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 94,
+                          width: 85,
+                          child: Stack(children: [
+                            Positioned(
+                              top: 15,
+                              child: Container(
+                                height: 74,
+                                width: 85,
+                                decoration: BoxDecoration(
+                                    color: const Color.fromARGB(
+                                        255, 238, 238, 238),
+                                    borderRadius: BorderRadius.circular(12)),
+                                child: Image.asset('lib/Icons/travel.png'),
+                              ),
+                            ),
+                          ]),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Travel',
+                          style: appStyle.sugtext,
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              )
+            ],
           )
         ],
       ),

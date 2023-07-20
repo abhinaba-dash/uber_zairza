@@ -27,7 +27,7 @@ class start extends StatelessWidget {
       body: Column(
         children: [
           const SizedBox(
-            height: 50,
+            height: 96,
           ),
           const Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -36,9 +36,9 @@ class start extends StatelessWidget {
                 "Uber",
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 50,
+                    fontSize: 24,
                     fontWeight: FontWeight.w400,
-                    fontFamily: "uber"),
+                    fontFamily: "UberMove"),
               ),
             ],
           ),
@@ -65,14 +65,14 @@ class start extends StatelessWidget {
                 "Move with Safety",
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 40,
+                    fontSize: 32,
                     fontWeight: FontWeight.bold,
-                    fontFamily: "uber"),
+                    fontFamily: "UberMove"),
               )
             ],
           ),
           const SizedBox(
-            height: 200,
+            height: 160,
           ),
           GestureDetector(
             onTap: () {
@@ -85,7 +85,7 @@ class start extends StatelessWidget {
                   width: 10,
                 ),
                 Container(
-                  height: 50,
+                  height: 64,
                   width: 370,
                   decoration: const BoxDecoration(
                     color: Colors.black,
@@ -103,9 +103,10 @@ class start extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 120,
+                        width: 100,
                       ),
                       Icon(
+                        size: 32,
                         Icons.arrow_right_outlined,
                         color: Colors.white,
                       )
